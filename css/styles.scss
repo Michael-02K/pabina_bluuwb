@@ -1,5 +1,94 @@
-body{
-    background-color: red;
-    color: white;
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*::before,*::after{box-sizing: inherit;}
+
+:root{
+    --dark_cyan: hsl(185, 75%, 39%);
+    --very_dark_desaturated: hsl(229, 23%, 23%);
+    --dark_grayish_blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 47%);
 }
 
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark_cyan);
+    background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat,no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+.flex{
+    //margin: 3rem;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    background-color: white;
+    width: 326px;
+    border-radius: 1.3rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 30px rgb(99, 99, 99);
+
+    &-header{
+        width: 100%;
+        display: block;
+    }
+
+
+
+    &-body{
+        border-bottom: 2px solid #9999996b;
+        display: flex;
+        flex-direction: column;
+        //justify-content: center;
+        align-items: center;
+
+        &-img{
+            border-radius: 10rem;
+            border: 5px solid white;
+            margin-top: calc(-48px - 5px);
+
+        }
+
+        &-tittle{
+            margin-top: 1.7rem;
+            font-size: 1.8rem;
+            span{
+                color: var(--dark-gray);
+                font-weight: 400;
+                margin-left: .6rem;
+            }
+        }
+
+        &-text{
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: var(--dark-gray);
+            font-weight: 400;
+            margin-bottom: 5rem;
+        }
+
+
+    }
+
+    &-footer{
+        display: flex;
+        justify-content: space-around;
+        font-size: 1rem;
+
+        &-social{
+            text-align: center;
+
+            p{
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+}
